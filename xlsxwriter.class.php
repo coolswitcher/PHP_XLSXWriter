@@ -760,8 +760,8 @@ class XLSXWriter
 
 		# Adjust for Excel erroneously treating 1900 as a leap year.
 		if ($days > 59) { $days++;}
-
-		return $days + $seconds;
+		return (number_format($days + $seconds, 10, '.', ''));
+		//return $days + $seconds;
 	}
 	//------------------------------------------------------------------
 }
